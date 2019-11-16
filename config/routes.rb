@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'attendees/home'
+  post 'attendees/home'
 
-  resources :attendees do
-    resources :contributions
-  end
+  resources :attendees
+  
  
-  root 'home#index'
+  root 'attendees#home'
 end

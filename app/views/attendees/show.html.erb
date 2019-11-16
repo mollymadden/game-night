@@ -14,32 +14,7 @@
   <%= @attendee.diet %>
 </p>
 
-<p>contributions</p>
-<% @attendee.contributions.each do |contribution| %>
 
-  <p>Contribution:
-    <%= contribution.details %>
-  </p>
-<% end %>
-
-
-<p>Add a contribution:</p>
-<%= form_with(model: [ @attendee, @attendee.contributions.build ], local: true) do |form| %>
-
-  <p>
-    <%= form.label :contribution %><br>
-    <%= form.check_box :contribution %>
-  </p>
-
-  <p>
-    <%= form.label :details %><br>
-    <%= form.text_field :details %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
 
 <%= link_to 'Edit', edit_attendee_path(@attendee) %> 
 <%= link_to 'Back', attendees_path %>
