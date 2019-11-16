@@ -1,0 +1,37 @@
+
+<%= form_with model: @attendee, local: true do |form| %>
+ 
+  <% if @attendee.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@attendee.errors.count, "error") %> prohibited
+        this attendee from being saved:
+      </h2>
+      <ul>
+        <% @attendee.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :coming %><br>
+    <%= form.check_box :coming %>
+  </p>
+
+    <p>
+    <%= form.label :diet %><br>
+    <%= form.select :diet, options_for_select( ['Vegetarian', 'Vegan', 'Gluten Free', 'Dairy Free', 'Religious Restrictions', 'Food Allergies'] ) %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
