@@ -10,17 +10,17 @@
  
     <p>
     <%= form.label "Dietary Restrictions" %><br>
-    <%= form.select :diet, options_for_select( ['Vegetarian', 'Vegan', 'Gluten Free', 'Dairy Free', 'Religious Restrictions', 'Food Allergies'] ) %>
+    <%= form.select :diet, options_for_select( ['Vegetarian', 'Vegan', 'Gluten Free', 'Dairy Free', 'Religious Restrictions', 'Food Allergies', 'Other - Please add more info below'] ) %>
   </p>
 
       <p>
-    <%= form.label "Suggested Contributions" %><br>
-    <%= form.select :contibution, options_for_select( ['Dessert', 'Video Game/Console', 'Cups', 'Napkins', 'Plates', 'Cutlery', 'Board Game'] ) %>
+    <%= form.label "Can you contribute any of the following?" %><br>
+    <%= form.select :contibution, options_for_select( ['Dessert', 'Video Game/Console', 'Cups', 'Napkins', 'Plates', 'Cutlery', 'Board Game', 'Other - Please add more info below'] ) %>
   </p>
 
     <p>
     <%= form.label "Any Additional Information" %><br>
-    <%= form.text_field :comment %>
+    <%= form.text_field :message %>
   </p>
  
   <p>

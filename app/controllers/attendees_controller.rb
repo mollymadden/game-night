@@ -1,5 +1,5 @@
 class AttendeesController < ApplicationController
-  http_basic_authenticate_with name: "molly", password: "password", except: [:index, :show, :new, :create]
+  http_basic_authenticate_with name: "molly", password: "password", except: [:index, :new, :create]
 
   def index
     @attendees = Attendee.all
@@ -21,7 +21,7 @@ class AttendeesController < ApplicationController
     @attendee = Attendee.new(attendee_params)
  
     if @attendee.save
-      redirect_to @attendee
+      redirect_to attendees_thanks_path
     else
       render 'new'
     end
@@ -46,6 +46,6 @@ class AttendeesController < ApplicationController
  
   private
     def attendee_params
-      params.require(:attendee).permit(:name, :coming, :diet, :contribution, :comment)
+      params.require(:attendee).permit(:name, :coming, :diet, :contribution, :message)
     end
 end

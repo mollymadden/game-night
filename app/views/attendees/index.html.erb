@@ -1,1 +1,27 @@
 
+<h1>Listing attendees</h1>
+ 
+<table class="table-container-index">
+  <tr>
+    <th>Name</th>
+    <th>Dietary Requirements</th>
+    <th>Help?</th>
+    <th>Additional Info</th>
+    <th></th>
+  </tr>
+ 
+
+
+  <% @attendees.each do |attendee| %>
+
+    <tr>
+      <td><%= attendee.name %></td>
+      <td><%= attendee.diet %></td>
+      <td><%= attendee.contribution %></td>
+      <td><%= attendee.message %></td>
+      <td><%= link_to 'Show', attendee_path(attendee) %></td>
+    </tr>
+  <% end %>
+
+
+</table>

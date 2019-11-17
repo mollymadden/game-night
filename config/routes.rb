@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'attendees/home'
-  post 'attendees/home'
+
+
+  get 'attendees/thanks'
 
   resources :attendees
   
  
-  root 'attendees#home'
+  root 'attendees#new'
 end
