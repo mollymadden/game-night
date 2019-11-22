@@ -1,5 +1,5 @@
 class AttendeesController < ApplicationController
-  http_basic_authenticate_with name: "molly", password: "password", except: [:index, :new, :create]
+  http_basic_authenticate_with name: "molly", password: "password", only: [:destroy]
 
   def index
     @attendees = Attendee.all
