@@ -64,6 +64,38 @@ h3 {
   color: #fff;
 }
 
+h5 {
+  letter-spacing: 5px;
+  font: 18px "Lato", sans-serif;
+  color: #777;
+}
+
+.arrow {
+  margin-top: 80vh;
+  border-radius: 50%;
+  margin-left: 90%;
+  width: 70px;
+  height: 70px;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -76,21 +108,23 @@ h3 {
 
 <div class="bgimg-1">
 
+<img src="/assets/expand-arrow.png" class="arrow">
+
 </div>
 
-<div style="color: #777;background-color:#000;text-align:center;padding:50px 80px; border: 2px solid pink; text-align: justify;">
-  <h3 style="text-align:center;">End of Term Two Game Night!</h3>
-  <p style="text-align:center;">Friday 29 November 2019 from 5:00pm<br>
-  Level 8, Studios 12 & 13<br>
-  Pizza, soft drink, beer & hard cider kindly provided by Coder Academy<br>
-  Please RSVP below by submitting your name, dietary requirements, and any contribution you'd like to make</p>
+<div style="color: #777;background-color:#000;text-align:center;padding:50px 80px; border: 2px solid #f81894; margin: 5px; text-align: justify;">
+  <h3 style="text-align:center;">End of Term Two Game Night!</h3><br><BR>
+  <h5 style="text-align:center;">Friday, 29 November 2019  from 5:00pm<br><BR>
+  Level 8, Studios 12 & 13 (our classroom)<br><BR>
+  Pizza & drinks kindly provided by Coder Academy<br><BR>
+  Please RSVP below</h5>
 </div>
 
 <div class="bgimg-2">
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#000;text-align:center;padding:50px 80px; border: 2px solid pink; text-align: justify;">
+  <div style="color:#ddd;background-color:#000;text-align:center;padding:50px 80px; border: 2px solid #f81894; margin: 5px; text-align: justify;">
     <h3 style="text-align:center;">COUNT ME IN!</h3>
 <%= render 'form' %>
   </div>
@@ -103,7 +137,7 @@ h3 {
 
 <div class="bgimg-3">
   <div class="caption">
-  <span class="border">Another Term Done!</span>
+  <span class="border">Fin</span>
   </div>
 </div>
 
